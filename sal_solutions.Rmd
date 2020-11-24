@@ -61,7 +61,8 @@ sal %>%
 ```{r message=FALSE, warning=FALSE}
 sal %>% 
   group_by(Year) %>% 
-  summarise(mean_base_pay = mean(BasePay, na.rm = TRUE))
+  summarise(mean_base_pay = mean(BasePay, na.rm = TRUE)) %>% 
+  ungroup()
 ```
 
 ### How many unique job titles are there?
